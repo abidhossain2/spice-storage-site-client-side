@@ -1,0 +1,23 @@
+.header{
+    position: absolute;
+    width: 974px;
+    left: 19%;
+    top: 24%;
+}
+
+.heading{
+    font-family: 'Lobster Two', cursive;
+}
+
+.heading .heading-txt_1, .heading-txt_2{
+    font-size: 34px;
+}
+
+.menu-bar{
+    height: 84px;
+}
+
+.fire-icon{
+    color: orange;
+    font-size: 34px;
+}
