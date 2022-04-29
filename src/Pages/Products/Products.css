@@ -11,3 +11,10 @@
 .products-heading {
     margin-top: 48px;
 }
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    justify-items: center;
+}

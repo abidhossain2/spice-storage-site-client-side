@@ -1,0 +1,23 @@
+.product{
+    width: 330px;
+    height: 503px;
+    border: 1px solid #e6dada;
+    text-align: center;
+    margin: 21px 0px;
+    box-shadow: 0px 0px 11px 0px #d97f7f;
+}
+.product img{
+    width: 327px;
+}
+
+.name, .price, .quantity, .supplier{
+    font-size: 19px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.detail{
+    color: #716668;
+}
