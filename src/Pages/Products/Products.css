@@ -1,0 +1,13 @@
+.products-heading h2{
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-size: 44px;
+}
+
+.products-section {
+    height: 80vh;
+}
+
+.products-heading {
+    margin-top: 48px;
+}
