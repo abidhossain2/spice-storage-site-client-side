@@ -25,3 +25,19 @@
     font-size: 20px;
     color: black;
 }
+
+.deliver-btn{
+    background: #e3c102;
+    color: black;
+    padding: 6px 35px;
+    border: none;
+    font-size: 17px;
+    font-family: 'Monda', sans-serif;
+    transition: all 0.4s;
+}
+
+.deliver-btn:hover{
+    background: black;
+    border: 2px solid #e3c102;
+    color: white;
+}

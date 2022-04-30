@@ -44,7 +44,7 @@ const Inventory = () => {
                 <p className='product-price'>Price: {product.price}</p>
                 <p className='product-quantity'>Quantity: {product.quantity} kg</p>
                 <p className='product-supplier'>Supplier: {product.supplier}</p>
-                <button onClick={handleQuantity}>Delivered</button>
+                <button className='deliver-btn' onClick={handleQuantity}>Deliver</button>
             </div>
         </div>
     );

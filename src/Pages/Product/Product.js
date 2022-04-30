@@ -16,9 +16,9 @@ const Product = (props) => {
                 <p className='name'><span>Name:</span> {name}</p>
                 <p className='detail'>{detail}</p>
                 <p className='price'><span>Price:</span> {price}</p>
-                <p className='quantity'><span>Quantity:</span> {quantity}</p>
+                <p className='quantity'><span>Quantity:</span> {quantity} kg</p>
                 <p className='supplier'><span>Supplier:</span> {supplier}</p>
-                <button onClick={handleInventory}>Stoke Update <MdUpdate className='update-icon'></MdUpdate></button>
+                <button  onClick={handleInventory}>Stoke Update <MdUpdate className='update-icon'></MdUpdate></button>
             </div>
         </>
     );
