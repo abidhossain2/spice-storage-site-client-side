@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useProducts from '../../Hook/useProducts';
 import useSingleProduct from '../../Hook/useSingleProduct';
+import './Inventory.css'
 
 const Inventory = () => {
     const { _id } = useParams()
@@ -17,11 +18,11 @@ const Inventory = () => {
                 <img src={product.img} alt="" />
             </div>
             <div className='product-description'>
-                <p>Name: {product.name}</p>
-                <p>{product.detail}</p>
-                <p>Price: {product.price}</p>
-                <p>Quantity: {product.quantity}</p>
-                <p>Supplier: {product.supplier}</p>
+                <p className='product-name'>Name: {product.name}</p>
+                <p className='product-detail'>{product.detail}</p>
+                <p className='product-price'>Price: {product.price}</p>
+                <p className='product-quantity'>Quantity: {product.quantity}</p>
+                <p className='product-supplier'>Supplier: {product.supplier}</p>
             </div>
         </div>
     );

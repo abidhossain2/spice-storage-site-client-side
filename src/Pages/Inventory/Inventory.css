@@ -1,0 +1,27 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    height: 84vh;
+}
+
+.product-img img {
+    width: 674px;
+}
+
+.product-description {
+    height: 397px;
+    width: 413px;
+}
+
+.product-name, .product-price, .product-quantity, .product-supplier{
+    font-size: 26px;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+}
+.product-detail{
+    font-size: 20px;
+    color: black;
+}
