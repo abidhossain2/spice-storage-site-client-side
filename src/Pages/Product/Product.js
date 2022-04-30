@@ -1,10 +1,14 @@
 import React from 'react';
 import './Product.css'
 import {MdUpdate} from 'react-icons/md'
-import { Link} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Product = (props) => {
-    const { name, img, detail, price, quantity, supplier,_id } = props.product;
+    const { _id, name, img, detail, price, quantity, supplier } = props.product;
+    const navigate = useNavigate();
+    const handleInventory = () => {
+        navigate(`/inventory/${_id}`)
+    }
     return (
         <>
             <div className='product'>
@@ -14,8 +18,7 @@ const Product = (props) => {
                 <p className='price'><span>Price:</span> {price}</p>
                 <p className='quantity'><span>Quantity:</span> {quantity}</p>
                 <p className='supplier'><span>Supplier:</span> {supplier}</p>
-                {/* <button onClick={()=>handleInventory(_id)}>Stoke Update <MdUpdate className='update-icon'></MdUpdate></button> */}
-                <Link to={`/inventory/${_id}`}>Stoke Update <MdUpdate className='update-icon'></MdUpdate></Link>
+                <button onClick={handleInventory}>Stoke Update <MdUpdate className='update-icon'></MdUpdate></button>
             </div>
         </>
     );
