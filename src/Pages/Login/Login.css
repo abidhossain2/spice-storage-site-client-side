@@ -1,0 +1,15 @@
+.reset-pass-link{
+    color: mediumblue;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.reset-pass{
+    margin-top: 19px;
+}
+
+.reg-link{
+    text-decoration: none;
+    margin-left: 9px;
+    color: mediumblue;
+}

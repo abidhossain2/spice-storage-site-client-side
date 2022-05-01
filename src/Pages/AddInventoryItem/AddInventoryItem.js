@@ -1,14 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './AddInventoryItem.css'
-import {BiArrowBack} from 'react-icons/bi'
+
 
 const AddInventoryItem = () => {
-    const previousPage = useNavigate();
-    const backToPrevious = () => {
-        previousPage(-1)
-    }
     const addItem = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -33,7 +28,6 @@ const AddInventoryItem = () => {
     }
     return (
         <div>
-            <button onClick={backToPrevious} className='back-btn' title='back to previous page'><BiArrowBack className='back-icon'></BiArrowBack></button>
             <div className='form-container'>
                 <h4>Product Information</h4>
                 <form onSubmit={addItem}>

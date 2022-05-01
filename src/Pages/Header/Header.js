@@ -3,7 +3,15 @@ import './Header.css'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import {AiTwotoneFire} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
+
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const signout = () =>{
+        signOut(auth);
+    }
     return (
         <div className='header'>
             <div className='navigation-bar'>
@@ -14,8 +22,19 @@ const Header = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-auto">
                                 <Link className='menu-link' to="/">Home</Link>
-                                <Link className='menu-link' to="/login">Login</Link>
+                                 {
+                                     user&& <Link className='manageitem' to='manageinventory'>Manage Item</Link>
+                                    }
+                                 {
+                                     user&& <Link className='add-inventory-item' to='addinventoryitem'>Add Item</Link>
+                                    }
+                                 {
+                                     user&& <Link className='my-items' to='myitems'>My Items</Link>
+                                    }
                                 <Link className='menu-link' to="/register">Register</Link>
+                                    {!user? <Link className='menu-link' to="/login">Login</Link> : 
+                                    <button className='signout-btn' onClick={signout}>Logout</button>
+                                     }
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

@@ -1,9 +1,9 @@
-.header{
+/* .header{
     position: absolute;
     width: 974px;
     left: 19%;
     top: 24%;
-}
+} */
 
 .heading{
     font-family: 'Lobster Two', cursive;
@@ -22,11 +22,34 @@
     font-size: 34px;
 }
 
-.menu-link{
+.menu-link, .manageitem, .add-inventory-item, .my-items{
     text-decoration: none;
     color: white;
     margin-right: 26px;
 }
 .menu-link:hover{
     color: orange;
+}
+.manageitem:hover{
+    color: orange;
+}
+.add-inventory-item:hover{
+    color: orange;
+}
+.my-items:hover{
+    color: orange;
+}
+
+.signout-btn{
+    border: none;
+    background: darkolivegreen;
+    color: white;
+    border-radius: 9px;
+    padding: 3px 9px;
+    transition: all 0.4s;
+}
+
+.signout-btn:hover{
+    background-color: aliceblue;
+    color: black;
 }
