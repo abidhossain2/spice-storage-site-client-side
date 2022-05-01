@@ -19,7 +19,7 @@ const ManageProduct = (props) => {
                 <div>
                     <p>Quantity: {quantity} kg</p>
                 </div>
-                <div>
+                <div onClick={delete}>
                     <TiDelete className='delete-icon'></TiDelete>
                 </div>
             </div>

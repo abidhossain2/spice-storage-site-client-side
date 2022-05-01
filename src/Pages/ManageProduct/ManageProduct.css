@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     width: 900px;
-    margin: 30px 30px;
+    margin: 30px auto;
     border: 1px solid #e2e0e0;
 }
 .manage-product-container .img-container .product-image{

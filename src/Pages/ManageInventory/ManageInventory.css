@@ -1,0 +1,19 @@
+.add-new-item{
+    background: #210a0a;
+    width: 143px;
+    margin-left: 86%;
+    margin-top: 3%;
+    padding: 11px;
+    border-radius: 12px;
+}
+
+.manage-link{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.manage-link:hover{
+    color: slategrey;
+}
