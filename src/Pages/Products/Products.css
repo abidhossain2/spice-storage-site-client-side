@@ -18,3 +18,29 @@
     gap: 22px;
     justify-items: center;
 }
+
+.manage-btn{
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 190px;
+    margin: auto;
+    padding: 9px 0px;
+    color: aliceblue;
+    background: #051621;
+    font-size: 18px;
+    transition: all 0.4s;
+}
+
+.manage-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+.manage{
+    height: 80px;
+    padding: 20px 0px;
+
+}

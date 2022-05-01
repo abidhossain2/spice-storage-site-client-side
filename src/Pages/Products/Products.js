@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useProducts from '../../Hook/useProducts';
 import Product from '../Product/Product';
 import './Products.css'
@@ -13,10 +14,13 @@ const Products = () => {
             <div className='products-container'>
                 {
                     products.map(product => <Product
-                    key={product._id}
-                    product={product}
-                    ></Product>)
+                        key={product._id}
+                        product={product}
+                    ></Product>).slice(0,6)
                 }
+            </div>
+            <div className='manage'>
+                <Link to='manageinventory' className='manage-btn'>Manage Inventories</Link>
             </div>
         </div>
     );

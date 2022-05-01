@@ -1,0 +1,32 @@
+.manage-product-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    margin: 30px 30px;
+    border: 1px solid #e2e0e0;
+}
+.manage-product-container .img-container .product-image{
+    width: 105px;
+}
+
+.manage-product-container div{
+    margin-right: 10px;
+    width:165px;
+}
+.manage-product-container div p{
+    font-weight: bold;
+}
+
+.delete-icon{
+    display: block;
+    margin: auto;
+    font-size: 39px;
+    color: #594141;
+    transition:all 0.8s;
+}
+
+.delete-icon:hover{
+    color: red;
+    cursor: pointer;
+}

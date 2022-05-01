@@ -33,11 +33,12 @@
     border: none;
     font-size: 17px;
     font-family: 'Monda', sans-serif;
+    margin-right: 30px;
     transition: all 0.4s;
 }
 
 .deliver-btn:hover{
     background: black;
-    border: 2px solid #e3c102;
+    /* border: 2px solid #e3c102; */
     color: white;
 }
