@@ -28,19 +28,19 @@
     width: 190px;
     margin: auto;
     padding: 9px 0px;
-    color: aliceblue;
+    color: white;
     background: #051621;
     font-size: 18px;
     transition: all 0.4s;
 }
 
 .manage-btn:hover{
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: rgb(35, 230, 223);
 }
 
 .manage{
     height: 80px;
-    padding: 20px 0px;
+    padding: 3px 0px;
 
 }

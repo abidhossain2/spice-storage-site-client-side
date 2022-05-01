@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import {AiTwotoneFire} from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className='header'>
@@ -12,14 +13,9 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-auto">
-                                <Nav.Link href="#features">Home</Nav.Link>
-                                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            </Nav>
-                            <Nav>
-                                <Nav.Link href="#deets">More deets</Nav.Link>
-                                <Nav.Link eventKey={2} href="#memes">
-                                    Dank memes
-                                </Nav.Link>
+                                <Link className='menu-link' to="/">Home</Link>
+                                <Link className='menu-link' to="/login">Login</Link>
+                                <Link className='menu-link' to="/register">Register</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

@@ -21,3 +21,12 @@
     color: orange;
     font-size: 34px;
 }
+
+.menu-link{
+    text-decoration: none;
+    color: white;
+    margin-right: 26px;
+}
+.menu-link:hover{
+    color: orange;
+}

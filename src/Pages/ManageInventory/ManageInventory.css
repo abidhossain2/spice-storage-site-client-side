@@ -11,9 +11,9 @@
     text-align: center;
     display: block;
     text-decoration: none;
-    color: white;
+    color: #52ff00;
 }
 
 .manage-link:hover{
-    color: slategrey;
+    color: white;
 }
