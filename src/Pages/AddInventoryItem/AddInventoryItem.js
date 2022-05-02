@@ -1,9 +1,12 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import './AddInventoryItem.css'
-
+import{useAuthState} from 'react-firebase-hooks/auth'
+import auth from '../../firebase.init'
 
 const AddInventoryItem = () => {
+    const [user] = useAuthState(auth)
+    const email = user?.email;
     const addItem = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -12,8 +15,7 @@ const AddInventoryItem = () => {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const supplier = e.target.supplier.value;
-
-        fetch('http://localhost:5000/products', {
+        fetch(`http://localhost:5000/products`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -24,6 +26,19 @@ const AddInventoryItem = () => {
             .then(data => {
                 console.log(data);
                 toast('New item added')
+            })
+
+        fetch(`http://localhost:5000/myitems`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ name, img, detail, price, quantity, supplier, email })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast('Product added in my items')
             })
     }
     return (

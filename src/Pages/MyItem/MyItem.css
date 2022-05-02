@@ -1,0 +1,10 @@
+.my-item-container{
+    width: 265px;
+    height: 450px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.my-item-img{
+    width: 203px;
+}

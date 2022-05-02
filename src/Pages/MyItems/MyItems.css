@@ -1,0 +1,7 @@
+.my-items-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin: 30px auto;
+    justify-items: center;
+}
