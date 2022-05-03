@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Header from '../Header/Header';
 import MyItem from '../MyItem/MyItem';
 import './MyItems.css'
 
@@ -16,6 +17,8 @@ const MyItems = () => {
         })
     }, [user?.email])
     return (
+        <>
+        <Header></Header>
         <div className='my-items-container'>
             {
                 myItems.map(myItem => <MyItem
@@ -24,6 +27,7 @@ const MyItems = () => {
                 ></MyItem>)   
             }
         </div>
+        </>
     );
 };
 

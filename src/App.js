@@ -3,18 +3,19 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import AddInventoryItem from './Pages/AddInventoryItem/AddInventoryItem';
 import Banner from './Pages/Banner/Banner';
-import Header from './Pages/Header/Header';
+// import Header from './Pages/Header/Header';
 import Inventory from './Pages/Inventory/Inventory';
 import Login from './Pages/Login/Login';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import MyItems from './Pages/MyItems/MyItems';
+import NotFound from './Pages/NotFound/NotFound';
 import ProtectedRoute from './Pages/ProtectedRoute/ProtectedRoute';
 import Register from './Pages/Register/Register'
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      {/* <Header></Header> */}
       <Routes>
         <Route path='/' element={<Banner></Banner>}></Route>
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
@@ -27,6 +28,7 @@ function App() {
         <Route path='/myitems' element={<MyItems></MyItems>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
     </div>

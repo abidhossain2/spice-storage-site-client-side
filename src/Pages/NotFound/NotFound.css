@@ -1,0 +1,10 @@
+.notfound-page-container{
+    background-color: #f1f1f1;
+    height: 100vh;
+}
+
+.notfound-page-container img{
+    display: block;
+    margin: auto;
+    width: 687px;
+}

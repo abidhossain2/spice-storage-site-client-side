@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import './AddInventoryItem.css'
 import{useAuthState} from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
+import Header from '../Header/Header';
 
 const AddInventoryItem = () => {
     const [user] = useAuthState(auth)
@@ -43,6 +44,7 @@ const AddInventoryItem = () => {
     }
     return (
         <div>
+            <Header></Header>
             <div className='form-container'>
                 <h4>Product Information</h4>
                 <form onSubmit={addItem}>

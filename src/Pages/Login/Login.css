@@ -1,15 +1,62 @@
-.reset-pass-link{
+.reset-pass-link {
     color: mediumblue;
     font-size: 17px;
     cursor: pointer;
 }
 
-.reset-pass{
+.reset-pass {
     margin-top: 19px;
 }
 
-.reg-link{
+.reg-link {
     text-decoration: none;
     margin-left: 9px;
     color: mediumblue;
+}
+
+.login-btn {
+    border: none;
+    background: #741641;
+    width: 100%;
+    height: 44px;
+    border-radius: 9px;
+    font-size: 18px;
+    font-family: 'Monda', cursive;
+    outline: none;
+    color: white;
+    margin-top: 11px;
+}
+.google-btn {
+    border: none;
+    background: #741641;
+    width: 100%;
+    height: 44px;
+    border-radius: 9px;
+    font-size: 18px;
+    font-family: 'Monda', cursive;
+    outline: none;
+    color: white;
+    margin-top: 11px;
+}
+
+.line-container{
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.line-1, .line-2{
+    width: 178px;
+    height: 1px;
+    background-color: black;
+}
+
+.or{
+    font-size: 18px;
+    padding: 15px;
+}
+
+.google-icon{
+    font-size: 24px;
+    margin-right: 20px;
 }

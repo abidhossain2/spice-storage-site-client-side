@@ -42,3 +42,11 @@
     background-color: aliceblue;
     color: black;
 }
+
+.userName{
+    border: none;
+    background: orange;
+    border-radius: 50%;
+    margin-left: 19px;
+    font-weight: bold;
+}

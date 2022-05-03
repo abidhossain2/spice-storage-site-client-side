@@ -3,6 +3,7 @@ import './Register.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const Register = () => {
     const backToHome = useNavigate();
@@ -10,6 +11,8 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
+    const [validPass, setValidPass] = useState('');
+    // const [matchPass, setMatchPass] = useState(false);
     const handleName = e => {
         e.preventDefault();
         setName(e.target.value)
@@ -20,7 +23,12 @@ const Register = () => {
     }
     const handlePassword = e => {
         e.preventDefault();
-        setPassword(e.target.value)
+        setPassword(e.target.value);
+        if(password < 6 ){
+            setValidPass('password must be 6 characters');           
+        }else{
+            setValidPass('')
+        }
     }
     const handleConfirmPassword = e => {
         e.preventDefault();
@@ -32,14 +40,17 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
         backToHome('/')
     }
+    
     return (
+        <>
+        <Header></Header>
         <div className='form-container'>
             <h4>Register</h4>
             <form onSubmit={createNewUser}>
                 <input type="text"  placeholder="Name" value={name} onChange={handleName} required/> <br />
                 <input type="email" placeholder="Email" value={email} onChange={handleEmail} required/> <br />
-                <input type="password" placeholder="Password" value={password} onChange={handlePassword} required/> <br />
-                <input type="password" placeholder="Confirm password" value={confirmpassword} onChange={handleConfirmPassword} required/> <br />
+                <input type="password" placeholder="Password" value={password} onChange={handlePassword} required/> <br /> {validPass}
+                <input type="password" placeholder="Confirm password" value={confirmpassword} onChange={handleConfirmPassword} required/> <br /> 
                 <button className='register-btn'>Register</button>
             </form>
             <div className='exist-login'>
@@ -47,6 +58,7 @@ const Register = () => {
                 <Link to='/login' className='login-link'>Login</Link>
             </div>
         </div>
+        </>
     );
 };
 

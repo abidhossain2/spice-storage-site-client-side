@@ -1,12 +1,13 @@
 .form-container .register-btn{
     border: none;
-    background: #30c3c8;
+    background: #741641;
     width: 100%;
-    height: 37px;
+    height: 44px;
     border-radius: 9px;
     font-size: 18px;
     font-family: 'Monda', cursive;
     outline: none;
+    color: white;
 }
 .login-link{
     text-decoration: none;

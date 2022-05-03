@@ -3,6 +3,7 @@ import './ManageProduct.css'
 import { TiDelete } from 'react-icons/ti'
 import { toast } from 'react-toastify'
 import useProducts from '../../Hook/useProducts';
+// import Header from '../Header/Header';
 
 const ManageProduct = (props) => {
     const { img, price, quantity, name, _id } = props.product;
@@ -28,6 +29,7 @@ const ManageProduct = (props) => {
     }
     return (
         <>
+        {/* <Header></Header> */}
             <div className='manage-product-container'>
                 <div className='img-container'>
                     <img className='product-image' src={img} alt="" />

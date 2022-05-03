@@ -14,11 +14,12 @@ const Header = () => {
         signOut(auth);
         navigate('/')
     }
-    const navLinkStyle = ({isActive}) => {
-        return{
+    const navLinkStyle = ({ isActive }) => {
+        return {
             color: isActive ? 'orange' : 'white'
         }
     }
+
     return (
         <div className='header'>
             <div className='navigation-bar'>
@@ -28,18 +29,21 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-auto">
-                                <NavLink className='menu-link' to="/"  style={navLinkStyle}>Home</NavLink>
-                                <NavLink className='manageitem' to='manageinventory' style={navLinkStyle}>Manage Item</NavLink>
+                                <NavLink className='menu-link' to="/" style={navLinkStyle}>Home</NavLink>
+                                <NavLink className='manageitem' to='/manageinventory' style={navLinkStyle}>Manage Item</NavLink>
 
                                 {
-                                    user && <NavLink className='add-inventory-item' to='addinventoryitem' style={navLinkStyle}>Add Item</NavLink>
+                                    user && <NavLink className='add-inventory-item' to='/addinventoryitem' style={navLinkStyle}>Add Item</NavLink>
                                 }
                                 {
-                                    user && <NavLink className='my-items' to='myitems' style={navLinkStyle}>My Items</NavLink>
+                                    user && <NavLink className='my-items' to='/myitems' style={navLinkStyle}>My Items</NavLink>
                                 }
-                                <NavLink className='menu-link' to="/register" style={navLinkStyle}>Register</NavLink>
+                                {!user && <NavLink className='menu-link' to="/register" style={navLinkStyle}>Register</NavLink>}
                                 {!user ? <NavLink className='menu-link' to="/login" style={navLinkStyle}>Login</NavLink> :
                                     <button className='signout-btn' onClick={signout}>Logout</button>
+                                }
+                                {
+                                    user && <button className='userName'>{user?.email.slice(0, 2).toUpperCase()}</button>
                                 }
                             </Nav>
                         </Navbar.Collapse>
