@@ -8,6 +8,7 @@ import Inventory from './Pages/Inventory/Inventory';
 import Login from './Pages/Login/Login';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import MyItems from './Pages/MyItems/MyItems';
+import ProtectedRoute from './Pages/ProtectedRoute/ProtectedRoute';
 import Register from './Pages/Register/Register'
 
 function App() {
@@ -17,13 +18,17 @@ function App() {
       <Routes>
         <Route path='/' element={<Banner></Banner>}></Route>
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
-        <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/manageinventory' element={
+          <ProtectedRoute>
+            <ManageInventory></ManageInventory>
+          </ProtectedRoute>
+        }></Route>
         <Route path='/addinventoryitem' element={<AddInventoryItem></AddInventoryItem>}></Route>
         <Route path='/myitems' element={<MyItems></MyItems>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

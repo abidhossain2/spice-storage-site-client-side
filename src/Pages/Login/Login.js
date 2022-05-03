@@ -1,11 +1,18 @@
 import React, {useState } from 'react';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify'
 import './Login.css'
 
 const Login = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [user] = useAuthState(auth)
+    const from = location.state?.from?.pathname || '/manageinventory'
+    if(user){
+        navigate(from , {replace: true})
+    }
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleEmail = e => {
