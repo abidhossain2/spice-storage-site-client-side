@@ -5,12 +5,13 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Inventory.css'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+// import { NavDropdown } from 'react-bootstrap';
 
 const Inventory = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
     const [amount, setAmount] = useState('')
-    // const [newAmount, setNewAmount] = useState('')
+    const [isActive, setIsActive] = useState(false)
     const backToHome = useNavigate();
     const handlePrevious = () => {
         backToHome('/')
@@ -77,11 +78,27 @@ const Inventory = () => {
                     <p className='product-quantity'>Quantity: {product.quantity} kg</p>
                     <p className='product-supplier'>Supplier: {product.supplier}</p>
                     <button className='deliver-btn' onClick={handleQuantityDecrease}>Deliver</button>
-                    {/* <button className='deliver-btn' onClick={handleQuantityIncrease}>Restoke</button> */}
-                    <form onSubmit={handleIncrease}>
-                        <input type="text" value={amount} onChange={e => setAmount(e.target.value)} />
-                        <button>add</button>
-                    </form>
+                    {/* <button className='restoke-btn'>
+                        <NavDropdown style={{color: 'black'}}>
+                            <form onSubmit={handleIncrease}>
+                                <input type="text" value={amount} onChange={e => setAmount(e.target.value)} />
+                                <button>add</button>
+                            </form>
+                        </NavDropdown>
+                    </button> */}
+                    
+                        <button className='deliver-btn' onClick={e => setIsActive(!isActive)}>Restoke</button>
+                        {
+                            isActive && (
+                               
+                                    <form onSubmit={handleIncrease} className='add-container'>
+                                        <input className='add-input' placeholder='Quantity' type="text" value={amount} onChange={e => setAmount(e.target.value)} /> <br />
+
+                                        <button className='add-btn'>Add</button>
+                                    </form>
+                                
+                            )
+                        }
                 </div>
             </div>
             <div className='manage'>

@@ -1,0 +1,47 @@
+.about-us{
+    height: 70vh;
+}
+
+.about-us h4{
+    font-size: 44px;
+    text-align: center;
+    font-family: 'Lobster Two';
+}
+.about-us-txt{
+    width: 900px;
+    height: 178px;
+    margin: auto;
+    padding: 14px;
+}
+.about-us-txt p{
+    text-align: center;
+    font-family: 'Monda';
+    font-size: 16px;
+}
+
+.about-us-container{
+    height: 240px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.about-us-box{
+    box-shadow: 0px 0px 10px 6px #ebeeee;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.about-us-box h2{
+    font-size: 46px;
+    text-align: center;
+    font-family: 'Monda';
+}
+
+.about-us-box p{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Monda';
+}

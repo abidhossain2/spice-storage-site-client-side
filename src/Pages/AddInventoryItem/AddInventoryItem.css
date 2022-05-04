@@ -11,9 +11,10 @@
     border: 1px solid #cebfbf;
     outline: none;
     border-radius: 9px;
+    font-family: 'Monda';
 }
 
-.form-container .add-btn{
+.form-container .add-inventory-btn{
     border: none;
     background: #30c3c8;
     width: 100%;

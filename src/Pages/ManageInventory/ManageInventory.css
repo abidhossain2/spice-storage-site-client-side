@@ -5,13 +5,14 @@
     margin-top: 8%;
     padding: 11px;
     border-radius: 12px;
+    font-family: 'Monda';
 }
 
 .manage-link{
     text-align: center;
     display: block;
     text-decoration: none;
-    color: #52ff00;
+    color: whitesmoke;
 }
 
 .manage-link:hover{

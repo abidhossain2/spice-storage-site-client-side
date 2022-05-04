@@ -1,0 +1,25 @@
+.supplier-container {
+    height: 65vh;
+}
+
+.supplier-heading h4{
+    font-family: 'Lobster Two';
+    font-size: 44px;
+    text-align: center;
+}
+.supplier-img-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 76px;
+}
+.supplier-image-box{
+    width: 250px;
+    height: 250px;
+}
+
+.supplier-image-box img{
+    width: 250px;
+    height: 250px;
+}

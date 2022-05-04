@@ -5,7 +5,7 @@
 }
 
 .products-section {
-    height: 80vh;
+    height: 197vh;
 }
 
 .products-heading {
@@ -29,14 +29,16 @@
     margin: auto;
     padding: 9px 0px;
     color: white;
-    background: #051621;
-    font-size: 18px;
+    background: #3a0e51;
+    font-size: 15px;
     transition: all 0.4s;
+    border-radius: 27px;
+    font-family: 'Monda';
 }
 
 .manage-btn:hover{
-    color: black;
-    background-color: rgb(35, 230, 223);
+    color: #f9f1f1;
+    background-color: black;
 }
 
 .manage{

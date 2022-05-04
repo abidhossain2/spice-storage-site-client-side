@@ -26,6 +26,7 @@
     text-decoration: none;
     color: white;
     margin-right: 26px;
+    font-family: 'Monda';
 }
 
 
@@ -36,6 +37,7 @@
     border-radius: 9px;
     padding: 3px 9px;
     transition: all 0.4s;
+    font-family: 'Monda';
 }
 
 .signout-btn:hover{

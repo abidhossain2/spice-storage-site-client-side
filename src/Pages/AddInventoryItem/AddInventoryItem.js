@@ -54,7 +54,7 @@ const AddInventoryItem = () => {
                     <input type="text" placeholder="Price" name="price" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Quantity" name="quantity" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Supplier" name="supplier" autoComplete='off' required /> <br />
-                    <button className='add-btn'>Add Item</button>
+                    <button className='add-inventory-btn'>Add Item</button>
                 </form>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import AboutUs from '../AboutUs/AboutUs';
 import Header from '../Header/Header';
 import Products from '../Products/Products';
+import Supplier from '../Supplier/Supplier';
 import './Banner.css'
 
 const Banner = () => {
@@ -14,6 +16,12 @@ const Banner = () => {
             </div>
             <div>
                 <Products></Products>
+            </div>
+            <div>
+                <Supplier></Supplier>
+            </div>
+            <div>
+                <AboutUs></AboutUs>
             </div>
         </div>
     );

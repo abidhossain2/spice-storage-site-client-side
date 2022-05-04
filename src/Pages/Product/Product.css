@@ -9,12 +9,16 @@
 
 .product button{
     border: none;
-    background: #76bb30;
-    padding: 8px 23px;
-    font-size: 17px;
+    background: #000000;
+    padding: 4px 11px;
+    font-size: 14px;
     color: white;
+    font-family: 'Monda';
+    border-radius: 5px;
 }
-
+.product button:hover{
+    box-shadow: 0px 0px 6px 2px rgb(91 121 122);
+}
 .update-icon{
     font-size: 20px;
 }
@@ -28,6 +32,7 @@
 .name, .price, .quantity, .supplier{
     font-size: 17px;
     font-weight: bold;
+    font-family: 'Monda';
 }
 
 
