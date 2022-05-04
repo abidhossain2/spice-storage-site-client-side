@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutUs from '../AboutUs/AboutUs';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Products from '../Products/Products';
 import Supplier from '../Supplier/Supplier';
@@ -22,6 +23,9 @@ const Banner = () => {
             </div>
             <div>
                 <AboutUs></AboutUs>
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );

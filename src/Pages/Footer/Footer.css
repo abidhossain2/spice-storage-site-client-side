@@ -1,0 +1,56 @@
+.footer-container {
+    height: 50vh;
+    background-color: red;
+}
+
+.footer-info-box {
+    background: blue;
+    height: 313px;
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-box {
+    background: yellow;
+    height: 275px;
+    width: 300px;
+    border: 1px solid aqua;
+}
+
+.contact-txt {
+    font-size: 22px;
+    font-family: 'Monda';
+    margin-left: 16px;
+}
+
+.location-container,
+.mobile-container,
+.phone-container,
+.envelop-container {
+    display: flex;
+    margin-left: 11px;
+    font-family: 'Monda';
+    height: 55px;
+}
+
+.location,
+.mobile,
+.phone,
+.envelop {
+    margin-left: 10px;
+}
+
+:is(.location, .mobile, .phone, .envelop) p {
+    font-size: 16px;
+}
+
+.location-icon,
+.mobile-icon,
+.phone-icon,
+.envelop-icon {
+    font-size: 22px;
+}
