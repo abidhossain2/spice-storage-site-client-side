@@ -3,9 +3,11 @@ import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword,
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify'
-import {IoLogoGoogle} from 'react-icons/io'
+import { IoLogoGoogle } from 'react-icons/io'
 import './Login.css'
 import Header from '../Header/Header';
+import{HiLockClosed} from 'react-icons/hi'
+import{BsEnvelopeFill} from 'react-icons/bs'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -41,11 +43,25 @@ const Login = () => {
     return (
         <div>
             <Header></Header>
-            <div className='form-container'>
+            <div className='login-form-container'>
                 <h4>Log In</h4>
                 <form onSubmit={signUser}>
-                    <input type="email" placeholder="Email" value={email} onChange={handleEmail} required /> <br />
-                    <input type="password" placeholder="Password" value={password} onChange={handlePassword} required /> <br />
+                    <div className='login-email-container'>
+                        <div className='login-icon-container'>
+                            <BsEnvelopeFill className='user-icon'></BsEnvelopeFill>
+                        </div>
+                        <div className="email-input-container">
+                            <input className='email-input' type="email" placeholder="Email" value={email} onChange={handleEmail} required />
+                        </div>
+                    </div> <br />
+                    <div className='login-pass-container'>
+                        <div className='login-icon-container'>
+                            <HiLockClosed className='user-icon'></HiLockClosed>
+                        </div>
+                        <div className="pass-input-container">
+                            <input className='pass-input' type="password" placeholder="Password" value={password} onChange={handlePassword} required />
+                        </div>
+                    </div> <br />
                     <button className='login-btn'>Login</button>
                 </form>
                 <div className='reset-pass'>

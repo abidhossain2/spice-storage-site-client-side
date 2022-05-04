@@ -1,3 +1,36 @@
+.login-form-container {
+    width: 400px;
+    margin: 120px auto;
+}
+.login-form-container h4{
+    font-family: 'Lobster Two';
+    font-size: 38px;
+}
+.login-email-container, .login-pass-container {
+    display: flex;
+    align-content: center;
+    height: 44px;
+    border: 1px solid gray;
+    border-radius: 9px;
+}
+
+.login-icon-container {
+    padding: 8px;
+}
+
+.email-input-container, .pass-input-container {
+    height: 100%;
+    width: 296px;
+    margin-left: 0px;
+}
+
+.email-input, .pass-input {
+    height: 100%;
+    margin: 0px;
+    border: none;
+    outline: none;
+}
+
 .reset-pass-link {
     color: mediumblue;
     font-size: 17px;
@@ -26,6 +59,7 @@
     color: white;
     margin-top: 11px;
 }
+
 .google-btn {
     border: none;
     background: #741641;
@@ -39,24 +73,25 @@
     margin-top: 11px;
 }
 
-.line-container{
+.line-container {
     height: 42px;
     display: flex;
     align-items: center;
 }
 
-.line-1, .line-2{
+.line-1,
+.line-2 {
     width: 178px;
     height: 1px;
     background-color: black;
 }
 
-.or{
+.or {
     font-size: 18px;
     padding: 15px;
 }
 
-.google-icon{
+.google-icon {
     font-size: 24px;
     margin-right: 20px;
 }

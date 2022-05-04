@@ -42,3 +42,14 @@
     /* border: 2px solid #e3c102; */
     color: white;
 }
+
+.back-icon{
+    font-size: 22px;
+}
+
+.back-btn{
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 15px;
+}

@@ -12,8 +12,11 @@ const MyItem = (props) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                window.location.reload();
-                toast('Successfully Deleted')
+                const confirmMsg = window.confirm("Are you sure to delete");
+                if(confirmMsg){
+                    window.location.reload();
+                    toast('Successfully Deleted')
+                }
             })
         
     }

@@ -2,6 +2,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
-    margin: 30px auto;
+    margin: 169px auto;
     justify-items: center;
 }

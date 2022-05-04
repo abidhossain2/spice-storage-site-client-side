@@ -1,20 +1,78 @@
-.form-container .register-btn{
+.reg-form-container .register-btn {
     border: none;
     background: #741641;
-    width: 100%;
+    width: 83%;
     height: 44px;
     border-radius: 9px;
     font-size: 18px;
     font-family: 'Monda', cursive;
     outline: none;
     color: white;
+    display: block;
+    margin: auto;
 }
-.login-link{
+
+.login-link {
     text-decoration: none;
     margin-left: 9px;
     color: mediumblue;
 }
 
-.exist-login{
+.exist-login {
     margin-top: 19px;
+    width: 300px;
+    margin-left: 53px;
+}
+
+.reg-form-container {
+    width: 550px;
+    margin: 138px auto
+}
+
+.reg-form-container h4 {
+    font-family: 'Lobster Two';
+    margin-left: 52px;
+    font-size: 38px;
+}
+
+.reg-form {
+    margin: 23px auto;
+    width: 536px;
+}
+
+.name-field-container,
+.email-field-container,
+.pass-field-container,
+.confirm-pass-field-container {
+    width: 450px;
+    border: 1px solid #cebfbf;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+}
+
+.icon-container {
+    width: 27px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 16px;
+    padding-left: 9px;
+}
+.user-icon{
+    font-size: 17px;
+}
+
+.name-field{
+    width: 363px;
+}
+.reg-form input {
+    width: 92%;
+    margin: 1px auto;
+    padding-left: 10px;
+    height: 47px;
+    outline: none;
+    display: block;
+    border: none;
 }

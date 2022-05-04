@@ -1,41 +1,71 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Inventory.css'
+import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 
 const Inventory = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
-
+    const [amount, setAmount] = useState('')
+    // const [newAmount, setNewAmount] = useState('')
+    const backToHome = useNavigate();
+    const handlePrevious = () => {
+        backToHome('/')
+    }
     useEffect(() => {
         fetch(`http://localhost:5000/inventory/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
 
-    const handleQuantity = () => {
-        window.location.reload();
-        toast('Successfully Delivered')
-        const quantity = product.quantity;
+    const handleQuantityDecrease = () => {
+        const quantity = parseInt(product.quantity);
         fetch(`http://localhost:5000/inventory/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify({ quantity })
+
         })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
             })
+        window.location.reload();
+        toast('Successfully Delivered')
     }
+    const handleIncrease = e => {
+        e.preventDefault();
+        const newQuantity = parseInt(amount);
+        const quantity = parseInt(product.quantity);
+        const newAmount = newQuantity + quantity;
+        console.log(newAmount);
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ newAmount })
+
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+        window.location.reload();
+        toast('Successfully Updated')
+    }
+
 
 
 
     return (
         <>
+            <button className='back-btn' title='Back to home' onClick={handlePrevious}><MdOutlineKeyboardBackspace className='back-icon'></MdOutlineKeyboardBackspace></button>
             <div className='product-container'>
                 <div className='product-img'>
                     <img src={product.img} alt="" />
@@ -46,7 +76,12 @@ const Inventory = () => {
                     <p className='product-price'>Price: {product.price}</p>
                     <p className='product-quantity'>Quantity: {product.quantity} kg</p>
                     <p className='product-supplier'>Supplier: {product.supplier}</p>
-                    <button className='deliver-btn' onClick={handleQuantity}>Deliver</button>
+                    <button className='deliver-btn' onClick={handleQuantityDecrease}>Deliver</button>
+                    {/* <button className='deliver-btn' onClick={handleQuantityIncrease}>Restoke</button> */}
+                    <form onSubmit={handleIncrease}>
+                        <input type="text" value={amount} onChange={e => setAmount(e.target.value)} />
+                        <button>add</button>
+                    </form>
                 </div>
             </div>
             <div className='manage'>
