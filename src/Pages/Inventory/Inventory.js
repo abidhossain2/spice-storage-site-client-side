@@ -92,8 +92,8 @@ const Inventory = () => {
                         }
                 </div>
             </div>
-            <div className='manage'>
-                <Link to='/manageinventory' className='manage-btn'>Manage Inventories</Link>
+            <div className='store'>
+                <Link to='/manageinventory' className='store-btn'>Manage Inventories</Link>
             </div>
         </>
     );

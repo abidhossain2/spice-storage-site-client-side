@@ -1,10 +1,9 @@
 .manage-product-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 900px;
     margin: 30px auto;
-    border: 1px solid #e2e0e0;
+    border: 1px solid #fbf2f2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
 }
 .manage-product-container .img-container .product-image{
     width: 105px;
@@ -12,22 +11,19 @@
 
 .manage-product-container div{
     margin-right: 10px;
-    width:165px;
+    width:200px;
 }
 .manage-product-container div p{
     font-weight: bold;
     font-family: 'Monda';
 }
 
-.delete-icon{
-    display: block;
-    margin: auto;
-    font-size: 39px;
-    color: #594141;
-    transition:all 0.8s;
-}
-
-.delete-icon:hover{
-    color: red;
+.dlt-btn{
+    border: 1px solid #e3b5b5;
+    padding: 2px 9px;
+    border-radius: 3px;
+    background: #c9e8e8;
+    color: black;
     cursor: pointer;
 }
+

@@ -1,6 +1,5 @@
 import React from 'react';
 import './ManageProduct.css'
-import { TiDelete } from 'react-icons/ti'
 import { toast } from 'react-toastify'
 import useProducts from '../../Hook/useProducts';
 // import Header from '../Header/Header';
@@ -43,7 +42,7 @@ const ManageProduct = (props) => {
                     <p>Quantity: {quantity} kg</p>
                 </div>
                 <div onClick={() => deleteItem(_id)}>
-                    <TiDelete className='delete-icon'></TiDelete>
+                    <span className='dlt-btn'>Delete</span>
                 </div>
             </div>
         </>

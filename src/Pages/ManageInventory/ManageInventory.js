@@ -14,7 +14,7 @@ const ManageInventory = () => {
             <div className='add-new-item'>
                 <Link to='/addinventoryitem' className='manage-link'>Add New Item</Link>
             </div>
-            <div>
+            <div className='all-products'> 
                 {
                     products.map(product => <ManageProduct
                         key={product._id}

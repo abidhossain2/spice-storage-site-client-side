@@ -2,6 +2,34 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
-    margin: 169px auto;
+    margin: 33px auto;
     justify-items: center;
+}
+
+@media (max-width:992px) {
+    .my-items-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin: 33px auto;
+        justify-items: center;
+    }
+}
+@media (max-width:768px) {
+    .my-items-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        margin: 33px auto;
+        justify-items: center;
+    }
+}
+@media (max-width:576px) {
+    .my-items-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 22px;
+        margin: 33px auto;
+        justify-items: center;
+    }
 }
