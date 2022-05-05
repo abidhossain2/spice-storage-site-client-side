@@ -29,7 +29,6 @@ const ManageProduct = (props) => {
     }
     return (
         <>
-        {/* <Header></Header> */}
             <div className='manage-product-container'>
                 <div className='img-container'>
                     <img className='product-image' src={img} alt="" />

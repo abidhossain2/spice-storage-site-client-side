@@ -27,6 +27,7 @@ const AddInventoryItem = () => {
             .then(data => {
                 console.log(data);
                 toast('New item added')
+                e.target.reset();
             })
 
         fetch(`http://localhost:5000/myitems`, {
@@ -40,6 +41,7 @@ const AddInventoryItem = () => {
             .then(data => {
                 console.log(data);
                 toast('Product added in my items')
+                e.target.reset();
             })
     }
     return (

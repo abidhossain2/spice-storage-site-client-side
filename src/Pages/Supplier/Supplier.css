@@ -1,25 +1,97 @@
-.supplier-container {
-    height: 65vh;
-}
+/* .supplier-container {
+    height: 90vh;
+} */
 
-.supplier-heading h4{
+.supplier-heading h4 {
     font-family: 'Lobster Two';
     font-size: 44px;
     text-align: center;
 }
-.supplier-img-container{
+
+.supplier-img-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     margin-top: 76px;
-}
-.supplier-image-box{
-    width: 250px;
-    height: 250px;
+    gap: 33px;
 }
 
-.supplier-image-box img{
-    width: 250px;
-    height: 250px;
+.supplier-image-box {
+    width: 200px;
+    height: 200px;
+}
+
+.supplier-image-box img {
+    width: 200px;
+    height: 200px;
+}
+
+ @media (max-width: 1216px) {
+    .supplier-img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 76px;
+        gap: 33px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .supplier-img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 76px;
+        gap: 33px;
+    }
+
+    .supplier-image-box {
+        width: 200px;
+        height: 200px;
+    }
+    .supplier-image-box img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .supplier-img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 76px;
+        gap: 33px;
+    }
+
+    .supplier-image-box {
+        width: 180px;
+        height: 180px;
+    }
+    .supplier-image-box img {
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width: 576px) {
+    .supplier-img-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 76px;
+        gap: 33px;
+    }
+    .supplier-image-box {
+        width: 180px;
+        height: 180px;
+    }
+    .supplier-image-box img {
+        width: 180px;
+        height: 180px;
+    }
 }

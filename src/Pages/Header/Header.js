@@ -28,7 +28,11 @@ const Header = () => {
                         <Navbar.Brand className='heading' href="#home"> <span className='heading-txt_1'>Spice</span> <AiTwotoneFire className='fire-icon'></AiTwotoneFire> <span className='heading-txt_2'>Stoke</span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="ms-auto">
+                            <Nav className="header-link">
+                                {
+                                    user && <p className='userName'>{user?.email.slice(0, 2).toUpperCase()}</p>
+                            
+                                }
                                 <NavLink className='menu-link' to="/" style={navLinkStyle}>Home</NavLink>
                                 <NavLink className='manageitem' to='/manageinventory' style={navLinkStyle}>Manage Item</NavLink>
 
@@ -40,11 +44,9 @@ const Header = () => {
                                 }
                                 {!user && <NavLink className='menu-link' to="/register" style={navLinkStyle}>Register</NavLink>}
                                 {!user ? <NavLink className='menu-link' to="/login" style={navLinkStyle}>Login</NavLink> :
-                                    <button className='signout-btn' onClick={signout}>Logout</button>
+                                    <p className='signout-btn' onClick={signout}>Logout</p>
                                 }
-                                {
-                                    user && <button className='userName'>{user?.email.slice(0, 2).toUpperCase()}</button>
-                                }
+
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

@@ -4,7 +4,6 @@
     align-items: center;
     justify-items: center;
     gap: 20px;
-    height: 84vh;
 }
 
 .product-img img {
@@ -43,7 +42,6 @@
 
 .deliver-btn:hover {
     background: black;
-    /* border: 2px solid #e3c102; */
     color: white;
 }
 
@@ -78,4 +76,21 @@
     border: none;
     margin-left: 158px;
     border: 1px solid #c6b7b7;
+}
+
+@media (max-width: 992px) {
+    .product-img img {
+        width: 674px;
+    }
+    
+    .product-description {
+        height: 397px;
+        width: 413px;
+    }
+    .deliver-btn {
+        padding: 8px 35px;
+    }
+    .restoke-btn {
+        padding: 0px 15px;
+    }
 }

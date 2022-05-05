@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='footer-container'>
             <div className='footer-info-box'>
                 <div className="footer-box">
-                    <p className='contact-txt'>Contact</p>
+                    <p className='footer-heading-txt'>Contact</p>
                     <div className='location-container'>
                         <div>
                             <TiLocation className='location-icon'></TiLocation>
@@ -45,15 +45,30 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-box">
-                    <p>Information</p>
+                    <p className='footer-heading-txt'>Information</p>
+
+                    <p className='footer-info-txt'>About us</p>
+                    <p className='footer-info-txt'>Product Information</p>
+                    <p className='footer-info-txt'>Privacy Policy</p>
+                    <p className='footer-info-txt'>Terms & condition</p>
+                    <p className='footer-info-txt'>Site Map</p>
                 </div>
                 <div className="footer-box">
-                    <p>Branches</p>
+                    <p className='footer-heading-txt'>Branches</p>
+                    <p className='footer-info-txt'>Dhaka</p>
+                    <p className='footer-info-txt'>Chittagong</p>
+                    <p className='footer-info-txt'>Rajshahi</p>
+                    <p className='footer-info-txt'>Bogra</p>
+                    <p className='footer-info-txt'>Mymensingh</p>
                 </div>
                 <div className="footer-box">
-                    <p>FAQs</p>
+                    <p className='footer-heading-txt'>FAQs</p>
+                    <p className='footer-info-txt'>How does privacy work?</p>
+                    <p className='footer-info-txt'>What other services are compatible with?</p>
+                    <p className='footer-info-txt'>What is the quality of products?</p>
                 </div>
             </div>
+            <p className='copy-right'>Copyright &copy; spiceStoke 2022</p>
         </div>
     );
 };

@@ -39,3 +39,71 @@
 .detail{
     color: #716668;
 }
+
+@media (max-width: 1216px) {
+    .product{
+        width: 330px;
+        height: 580px;
+        border: 1px solid #e6dada;
+        text-align: center;
+        margin: 21px 0px;
+        box-shadow: 0px 0px 11px 0px #d97f7f;
+    }
+    .product img{
+        width: 327px;
+        padding: 12px;
+        height: 250px;
+    }
+    
+    .name, .price, .quantity, .supplier{
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Monda';
+    }
+}
+@media (max-width: 992px) {
+    .product{
+        width: 317px;
+        height: 539px;
+        border: 1px solid #e6dada;
+        text-align: center;
+        margin: 21px 0px;
+        box-shadow: 0px 0px 11px 0px #d97f7f;
+    }
+    .product img{
+        width: 300px;
+        padding: 12px;
+        height: 214px;
+    }
+    
+    .name, .price, .quantity, .supplier{
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Monda';
+    }
+}
+@media (max-width: 768px) {
+    .product{
+        width: 270px;
+        height: 493px;
+        border: 1px solid #e6dada;
+        text-align: center;
+        margin: 21px 0px;
+        box-shadow: 0px 0px 11px 0px #d97f7f;
+    }
+    .product img{
+        width: 259px;
+        padding: 12px;
+        height: 190px;
+    }
+    
+    .name, .price, .quantity, .supplier{
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Monda';
+    }
+    .detail{
+        color: #716668;
+        font-size: 12px;
+    }
+} 

@@ -8,13 +8,35 @@
 
 .header-txt{
     position: absolute;
-    top: 35%;
-    left: 34%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header-txt h2{
     color: #ffffff;
-    font-size: 80px;
+    font-size: 114px;
     font-family: 'Lobster Two', cursive;
     text-align: center;
+}
+
+@media (max-width: 1216px) {
+    .header-txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 768px) {
+    .header-txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header-txt h2{
+        font-size: 80px;
+    }
 }

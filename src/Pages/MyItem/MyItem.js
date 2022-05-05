@@ -13,12 +13,11 @@ const MyItem = (props) => {
             .then(data => {
                 console.log(data);
                 const confirmMsg = window.confirm("Are you sure to delete");
-                if(confirmMsg){
+                if (confirmMsg) {
                     window.location.reload();
                     toast('Successfully Deleted')
                 }
             })
-        
     }
     return (
         <div>
@@ -29,7 +28,7 @@ const MyItem = (props) => {
                 <p className='price'>Price: {price}</p>
                 <p className='quantity'>Quantity: {quantity} kg</p>
                 <p className='supplier'>Supplier: {supplier}</p>
-                <button onClick={() => myItemDelete(_id)}>Delete</button>
+                <button className='myitem-delete-btn' onClick={() => myItemDelete(_id)}>Delete</button>
             </div>
         </div>
     );

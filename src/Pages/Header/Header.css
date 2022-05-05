@@ -1,28 +1,31 @@
-.header{
-    position: fixed;
-    width: 100%;
+.header {
+    position: sticky;
     top: 0;
     z-index: 1;
 }
 
-.heading{
+.heading {
     font-family: 'Lobster Two', cursive;
 }
 
-.heading .heading-txt_1, .heading-txt_2{
+.heading .heading-txt_1,
+.heading-txt_2 {
     font-size: 34px;
 }
 
-.menu-bar{
+.menu-bar {
     height: 84px;
 }
 
-.fire-icon{
+.fire-icon {
     color: orange;
     font-size: 34px;
 }
 
-.menu-link, .manageitem, .add-inventory-item, .my-items{
+.menu-link,
+.manageitem,
+.add-inventory-item,
+.my-items {
     text-decoration: none;
     color: white;
     margin-right: 26px;
@@ -30,7 +33,7 @@
 }
 
 
-.signout-btn{
+.signout-btn {
     border: none;
     background: darkolivegreen;
     color: white;
@@ -38,17 +41,143 @@
     padding: 3px 9px;
     transition: all 0.4s;
     font-family: 'Monda';
+    cursor: pointer;
 }
 
-.signout-btn:hover{
+.signout-btn:hover {
     background-color: aliceblue;
     color: black;
 }
 
-.userName{
+.userName {
     border: none;
     background: orange;
     border-radius: 50%;
-    margin-left: 19px;
+    margin-right: 21px;
     font-weight: bold;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.header-link {
+    margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    .userName {
+        border: none;
+        background: orange;
+        border-radius: 50%;
+        margin-right: 21px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        color: white;
+        margin-left: auto;
+        margin-top: 25px;
+    }
+
+    .signout-btn {
+        width: 100px;
+        display: block;
+        margin-bottom: 9px;
+        margin-left: auto;
+        margin-right: 11px;
+        cursor: pointer;
+        text-align:center;
+    }
+
+    .header-link {
+        line-height: 31px;
+        background: #212529;
+        text-align: end;
+        margin-left: auto;
+    }
+
+    .menu-link,
+    .manageitem,
+    .add-inventory-item,
+    .my-items {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .userName {
+        border: none;
+        background: orange;
+        border-radius: 50%;
+        margin-right: 21px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        color: white;
+        margin-left: auto;
+        margin-top: 25px;
+    }
+
+    .signout-btn {
+        width: 100px;
+        display: block;
+        margin-bottom: 9px;
+        margin-left: auto;
+        margin-right: 11px;
+        cursor: pointer;
+        text-align:center;
+    }
+
+    .header-link {
+        line-height: 31px;
+        background: #212529;
+        margin-left: auto;
+    }
+
+    .menu-link,
+    .manageitem,
+    .add-inventory-item,
+    .my-items {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .userName {
+        border: none;
+        background: orange;
+        border-radius: 50%;
+        margin-right: 21px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        color: white;
+        margin-left: auto;
+        margin-top: 25px;
+    }
+
+    .signout-btn {
+        width: 100px;
+        display: block;
+        margin-bottom: 9px;
+        margin-left: auto;
+        margin-right: 11px;
+        cursor: pointer;
+        text-align:center;
+    }
+
+    .header-link {
+        line-height: 31px;
+        background: #212529;
+        margin-left: auto;
+    }
+
+    .menu-link,
+    .manageitem,
+    .add-inventory-item,
+    .my-items {
+        margin-bottom: 12px;
+    }
 }
