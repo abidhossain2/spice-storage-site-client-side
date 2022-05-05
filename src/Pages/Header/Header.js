@@ -42,6 +42,7 @@ const Header = () => {
                                 {
                                     user && <NavLink className='my-items' to='/myitems' style={navLinkStyle}>My Items</NavLink>
                                 }
+                                <NavLink className='blogs' to='/blogs' style={navLinkStyle}>Blogs</NavLink>
                                 {!user && <NavLink className='menu-link' to="/register" style={navLinkStyle}>Register</NavLink>}
                                 {!user ? <NavLink className='menu-link' to="/login" style={navLinkStyle}>Login</NavLink> :
                                     <p className='signout-btn' onClick={signout}>Logout</p>

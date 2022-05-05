@@ -25,7 +25,7 @@
 .menu-link,
 .manageitem,
 .add-inventory-item,
-.my-items {
+.my-items, .blogs {
     text-decoration: none;
     color: white;
     margin-right: 26px;
@@ -99,7 +99,7 @@
     .menu-link,
     .manageitem,
     .add-inventory-item,
-    .my-items {
+    .my-items, .blogs {
         margin-bottom: 12px;
     }
 }
@@ -138,7 +138,7 @@
     .menu-link,
     .manageitem,
     .add-inventory-item,
-    .my-items {
+    .my-items, .blogs {
         margin-bottom: 12px;
     }
 }
@@ -177,7 +177,7 @@
     .menu-link,
     .manageitem,
     .add-inventory-item,
-    .my-items {
+    .my-items, .blogs {
         margin-bottom: 12px;
     }
 }

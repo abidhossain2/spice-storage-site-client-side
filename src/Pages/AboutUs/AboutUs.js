@@ -8,7 +8,7 @@ const AboutUs = () => {
                 <h4>About Us</h4>
                 <div className='about-us-txt'>
                     <p>
-                        Stared in Czechoslovakia in 1927. In 1966, he entered the spice trade along with his wife and lifelong partner, Blanche and established Pacific Spice Company. With hard work, determination and his strong religious faith he successfully grew his small business, buying and selling spices and herbs for local food businesses. In the early years, Akiba would come home excited about every sale even if it was just 10 pounds of pepper sold straight out of the back of his station wagon. He continued to use the skills he mastered as an educator to study, learn and teach, both within his community and with whomever he interacted in the business community.
+                        Stared in Czechoslovakia in 1927. In 1966, he entered the spice trade along with his wife and lifelong partner, Blanche and established Pacific Spice Company. With hard work, determination and his strong religious faith he successfully grew his small business, buying and selling spices and herbs for local food businesses. In the early years, Akiba would come home excited about every sale even if it was just 10 pounds of pepper sold straight out of the back of his station wagon.
                     </p>
                 </div>
                 <div className='about-us-container'>

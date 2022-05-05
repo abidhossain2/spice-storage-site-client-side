@@ -52,7 +52,10 @@ const AddInventoryItem = () => {
                 <form onSubmit={addItem}>
                     <input type="text" placeholder="Name" name="name" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Image url" name="img" autoComplete='off' required /> <br />
-                    <input type="text" placeholder="Detail" name="detail" autoComplete='off' required /> <br />
+                    {/* <input type="text" placeholder="Detail" name="detail" autoComplete='off' required /> */}
+                    <textarea placeholder='Detail'></textarea>
+                     <br />
+
                     <input type="text" placeholder="Price" name="price" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Quantity" name="quantity" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Supplier" name="supplier" autoComplete='off' required /> <br />

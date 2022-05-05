@@ -1,11 +1,11 @@
-.form-container{
+.form-container {
     width: 400px;
-    margin:118px auto;
+    margin: 118px auto;
 }
 
-.form-container input{
+.form-container input {
     width: 100%;
-    margin:12px 0px;
+    margin: 12px 0px;
     padding-left: 10px;
     height: 45px;
     border: 1px solid #cebfbf;
@@ -14,7 +14,15 @@
     font-family: 'Monda';
 }
 
-.form-container .add-inventory-btn{
+.form-container textarea {
+    border: 1px solid #cebfbf;
+    border-radius: 9px;
+    width: 100%;
+    padding-left: 10px;
+    font-family: 'Monda';
+}
+
+.form-container .add-inventory-btn {
     border: none;
     background: #30c3c8;
     width: 100%;
@@ -24,20 +32,21 @@
     font-family: 'Monda', cursive;
     outline: none;
 }
-.form-container h4{
+
+.form-container h4 {
     font-family: 'Lobster Two', sans-serif;
     font-size: 34px;
 }
 
 @media (max-width: 576px) {
-    .form-container{
+    .form-container {
         width: 280px;
-        margin:118px auto;
+        margin: 118px auto;
     }
-    
-    .form-container input{
+
+    .form-container input {
         width: 100%;
-        margin:12px 0px;
+        margin: 12px 0px;
         padding-left: 10px;
         height: 45px;
         border: 1px solid #cebfbf;
@@ -45,7 +54,16 @@
         border-radius: 9px;
         font-family: 'Monda';
     }
-    .form-container .add-inventory-btn{
+
+    .form-container textarea {
+        border: 1px solid #cebfbf;
+        border-radius: 9px;
+        width: 100%;
+        padding-left: 10px;
+        font-family: 'Monda';
+    }
+
+    .form-container .add-inventory-btn {
         border: none;
         background: #30c3c8;
         width: 100%;
@@ -56,4 +74,3 @@
         outline: none;
     }
 }
-

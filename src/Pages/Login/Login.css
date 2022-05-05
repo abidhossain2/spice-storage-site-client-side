@@ -1,6 +1,6 @@
 .login-form-container {
     width: 400px;
-    margin: 120px auto;
+    margin: 37px auto;
 }
 .login-form-container h4{
     font-family: 'Lobster Two';
@@ -94,4 +94,11 @@
 .google-icon {
     font-size: 24px;
     margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+    .login-form-container {
+        width: 300px;
+        /* margin: 37px auto; */
+    }
 }

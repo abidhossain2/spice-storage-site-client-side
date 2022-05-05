@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import AddInventoryItem from './Pages/AddInventoryItem/AddInventoryItem';
 import Banner from './Pages/Banner/Banner';
+import Blogs from './Pages/Blogs/Blogs';
 // import Header from './Pages/Header/Header';
 import Inventory from './Pages/Inventory/Inventory';
 import Login from './Pages/Login/Login';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/myitems' element={<MyItems></MyItems>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
