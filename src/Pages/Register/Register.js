@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './Register.css'
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+// import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import { RiUser3Fill } from 'react-icons/ri'
-import {BsEnvelopeFill} from 'react-icons/bs'
-import {HiLockClosed} from 'react-icons/hi'
+import { BsEnvelopeFill } from 'react-icons/bs'
+import { HiLockClosed } from 'react-icons/hi'
+import { toast } from 'react-toastify';
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 const Register = () => {
     const backToHome = useNavigate();
     const [name, setName] = useState('');
@@ -15,6 +18,9 @@ const Register = () => {
     const [confirmpassword, setConfirmPassword] = useState('');
     const [validPass, setValidPass] = useState('');
     const [matchPass, setMatchPass] = useState('');
+    const [errMsg, setErrMsg] = useState("")
+
+
     const handleName = e => {
         e.preventDefault();
         setName(e.target.value)
@@ -44,11 +50,20 @@ const Register = () => {
 
     }
 
-    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+    const [verifyEmail] = useSendEmailVerification(auth)
     const createNewUser = e => {
         e.preventDefault();
-        createUserWithEmailAndPassword(email, password);
-        backToHome('/')
+        if (email !== "" && password !== "") {
+            try {
+                createUserWithEmailAndPassword(auth, email, password)
+            verifyEmail()
+            toast('Verify email sent')
+            backToHome('/')
+            } catch (error) {
+                let errorCode = error.code.split("auth/")[1]
+                    setErrMsg(errorCode)
+            }
+        }
     }
 
     return (
@@ -69,7 +84,7 @@ const Register = () => {
                         <div className='icon-container'>
                             <BsEnvelopeFill className='user-icon'></BsEnvelopeFill>
                         </div>
-                        <div className="email-container">
+                        <div className="email-field">
                             <input type="email" placeholder="Email" value={email} onChange={handleEmail} required />
                         </div>
                     </div> <br />
@@ -89,6 +104,7 @@ const Register = () => {
                             <input type="password" placeholder="Confirm password" value={confirmpassword} onChange={(e) => validation(e)} required />
                         </div>
                     </div> <br /> {matchPass}
+                    {errMsg !== "" ? <p>{errMsg}</p> : null}
                     <button className='register-btn'>Register</button>
                 </form>
                 <div className='exist-login'>

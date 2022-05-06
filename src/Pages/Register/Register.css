@@ -63,14 +63,17 @@
 
 
 .reg-form input {
-    margin: 1px auto;
-    padding-left: 10px;
+    padding-left: 13px;
     height: 47px;
     outline: none;
     display: block;
     border: none;
+    width: 100%;
+    border-radius: 25px;
 }
-
+.name-field, .email-field, .pass-field, .confirm-pass-field{
+    width: 100%;
+}
 @media (max-width: 576px) {
     .reg-form-container {
         width: 300px;

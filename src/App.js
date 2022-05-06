@@ -16,7 +16,6 @@ import Register from './Pages/Register/Register'
 function App() {
   return (
     <div className="App">
-      {/* <Header></Header> */}
       <Routes>
         <Route path='/' element={<Banner></Banner>}></Route>
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
