@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Register.css'
-// import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,6 +9,8 @@ import { BsEnvelopeFill } from 'react-icons/bs'
 import { HiLockClosed } from 'react-icons/hi'
 import { toast } from 'react-toastify';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
+import {Spinner} from 'react-bootstrap'
+
 const Register = () => {
     const backToHome = useNavigate();
     const [name, setName] = useState('');
@@ -19,8 +20,13 @@ const Register = () => {
     const [validPass, setValidPass] = useState('');
     const [matchPass, setMatchPass] = useState('');
     const [errMsg, setErrMsg] = useState("")
-
-
+    const [spinner, setSpinner] = useState(false)
+    useEffect ( () => {
+        setSpinner(true);
+        setTimeout(() => {
+            setSpinner(false)
+        }, 2000);
+    }, [])
     const handleName = e => {
         e.preventDefault();
         setName(e.target.value)
@@ -69,6 +75,12 @@ const Register = () => {
     return (
         <>
             <Header></Header>
+            {
+                spinner ? 
+                <div className='loader'>
+                    <Spinner animation="border" variant="warning" />
+                </div>
+                :
             <div className='reg-form-container'>
                 <h4>Register</h4>
                 <form onSubmit={createNewUser} className='reg-form'>
@@ -112,6 +124,7 @@ const Register = () => {
                     <Link to='/login' className='login-link'>Login</Link>
                 </div>
             </div>
+            }
         </>
     );
 };
