@@ -4,7 +4,6 @@ import './App.css';
 import AddInventoryItem from './Pages/AddInventoryItem/AddInventoryItem';
 import Banner from './Pages/Banner/Banner';
 import Blogs from './Pages/Blogs/Blogs';
-// import Header from './Pages/Header/Header';
 import Inventory from './Pages/Inventory/Inventory';
 import Login from './Pages/Login/Login';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
