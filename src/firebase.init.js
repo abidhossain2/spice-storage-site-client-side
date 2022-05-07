@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDraM3i75-eW0oV8kkbiCj84E3PNdBapE8",
-  authDomain: "spice-stoke.firebaseapp.com",
-  projectId: "spice-stoke",
-  storageBucket: "spice-stoke.appspot.com",
-  messagingSenderId: "845466161830",
-  appId: "1:845466161830:web:297fc92cdeac6a4862da67"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID
 };
 
 // Initialize Firebase
