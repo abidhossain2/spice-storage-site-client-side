@@ -61,8 +61,8 @@ const Login = () => {
         <div>
             {
                 spinner ?
-                    <div>
-                        <Spinner animation="border" variant="warning" className='loader' />
+                    <div className='loader'>
+                        <Spinner animation="border" variant="warning" />
                     </div> :
                     <>
                         <Header></Header>

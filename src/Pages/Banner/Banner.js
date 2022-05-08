@@ -16,11 +16,11 @@ const Banner = () => {
         }, 2000);
     }, [])
     return (
-        <div>
+        <div  className='loader' >
             {
                 spinner ?
                     <div>
-                        <Spinner animation="border" variant="warning" className='loader' />
+                        <Spinner animation="border" variant="warning"/>
                     </div> :
                     <>
                         <Header></Header>

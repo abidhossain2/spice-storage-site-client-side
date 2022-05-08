@@ -76,8 +76,8 @@ const Register = () => {
         <div>
             {
                 spinner ?
-                    <div>
-                        <Spinner animation="border" variant="warning" className='loader' />
+                    <div className='loader' >
+                        <Spinner animation="border" variant="warning"/>
                     </div>
                     :
                     <>
