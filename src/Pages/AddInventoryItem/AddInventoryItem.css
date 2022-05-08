@@ -20,6 +20,7 @@
     width: 100%;
     padding-left: 10px;
     font-family: 'Monda';
+    outline: none;
 }
 
 .form-container .add-inventory-btn {

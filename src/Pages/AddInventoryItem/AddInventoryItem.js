@@ -52,8 +52,8 @@ const AddInventoryItem = () => {
                 <form onSubmit={addItem}>
                     <input type="text" placeholder="Name" name="name" autoComplete='off' required /> <br />
                     <input type="text" placeholder="Image url" name="img" autoComplete='off' required /> <br />
-                    {/* <input type="text" placeholder="Detail" name="detail" autoComplete='off' required /> */}
-                    <textarea placeholder='Detail'></textarea>
+                  
+                    <textarea placeholder='Detail' name="detail"></textarea>
                      <br />
 
                     <input type="text" placeholder="Price" name="price" autoComplete='off' required /> <br />
