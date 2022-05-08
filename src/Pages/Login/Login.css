@@ -100,7 +100,6 @@
 
 @media (max-width: 576px) {
     .login-form-container {
-        width: 100%;
-        /* margin: 37px auto; */
+        width: 300px;
     }
 }
