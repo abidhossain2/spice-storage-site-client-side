@@ -59,57 +59,59 @@ const Login = () => {
 
     return (
         <div>
-            <Header></Header>
             {
                 spinner ?
                     <div className='loader'>
                         <Spinner animation="border" variant="warning" />
                     </div> :
+                    <>
+                        <Header></Header>
 
-                    <div className='login-form-container'>
-                        <h4>Log In</h4>
-                        {error !== "" ? <Alert variant={'danger'}>
-                            {error.toUpperCase()}
-                        </Alert> : null}
-                        <form onSubmit={signUser}>
+                        <div className='login-form-container'>
+                            <h4>Log In</h4>
+                            {error !== "" ? <Alert variant={'danger'}>
+                                {error.toUpperCase()}
+                            </Alert> : null}
+                            <form onSubmit={signUser}>
 
-                            <div className='login-email-container'>
-                                <div className='login-icon-container'>
-                                    <BsEnvelopeFill className='user-icon'></BsEnvelopeFill>
-                                </div>
-                                <div className="email-input-container">
-                                    <input className='email-input' type="email" placeholder="Email" value={email} onChange={handleEmail} required />
-                                </div>
-                            </div> <br />
-                            <div className='login-pass-container'>
-                                <div className='login-icon-container'>
-                                    <HiLockClosed className='user-icon'></HiLockClosed>
-                                </div>
-                                <div className="pass-input-container">
-                                    <input className='pass-input' type="password" placeholder="Password" value={password} onChange={handlePassword} required />
-                                </div>
-                            </div> <br />
+                                <div className='login-email-container'>
+                                    <div className='login-icon-container'>
+                                        <BsEnvelopeFill className='user-icon'></BsEnvelopeFill>
+                                    </div>
+                                    <div className="email-input-container">
+                                        <input className='email-input' type="email" placeholder="Email" value={email} onChange={handleEmail} required />
+                                    </div>
+                                </div> <br />
+                                <div className='login-pass-container'>
+                                    <div className='login-icon-container'>
+                                        <HiLockClosed className='user-icon'></HiLockClosed>
+                                    </div>
+                                    <div className="pass-input-container">
+                                        <input className='pass-input' type="password" placeholder="Password" value={password} onChange={handlePassword} required />
+                                    </div>
+                                </div> <br />
 
-                            <button className='login-btn'>Login</button>
-                        </form>
-                        <div className='reset-pass'>
-                            <span className='reset-pass-link' onClick={async () => {
-                                await resetPassword(email)
-                                toast('Reset email sent')
-                            }
-                            }>Forgot password</span>
+                                <button className='login-btn'>Login</button>
+                            </form>
+                            <div className='reset-pass'>
+                                <span className='reset-pass-link' onClick={async () => {
+                                    await resetPassword(email)
+                                    toast('Reset email sent')
+                                }
+                                }>Forgot Password!</span>
+                            </div>
+                            <div className='reset-pass'>
+                                <span>Don't have an account?</span>
+                                <Link to='/register' className='reg-link'>Register</Link>
+                            </div>
+                            <div className='line-container'>
+                                <div className='line-1'></div> <div className='or'>or</div> <div className='line-2'></div>
+                            </div>
+                            <div>
+                                <button className='google-btn' onClick={googleSign}><IoLogoGoogle className='google-icon'></IoLogoGoogle>Login with google</button>
+                            </div>
                         </div>
-                        <div className='reset-pass'>
-                            <span>Don't have an account?</span>
-                            <Link to='/register' className='reg-link'>Register</Link>
-                        </div>
-                        <div className='line-container'>
-                            <div className='line-1'></div> <div className='or'>or</div> <div className='line-2'></div>
-                        </div>
-                        <div>
-                            <button className='google-btn' onClick={googleSign}><IoLogoGoogle className='google-icon'></IoLogoGoogle>Login with google</button>
-                        </div>
-                    </div>
+                    </>
             }
         </div>
     );

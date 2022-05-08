@@ -34,7 +34,7 @@ const Header = () => {
                             
                                 }
                                 <NavLink className='menu-link' to="/" style={navLinkStyle}>Home</NavLink>
-                                <NavLink className='manageitem' to='/manageinventory' style={navLinkStyle}>Manage Item</NavLink>
+                                <NavLink className='manageitem' to='/manageinventory' style={navLinkStyle}>Manage Items</NavLink>
 
                                 {
                                     user && <NavLink className='add-inventory-item' to='/addinventoryitem' style={navLinkStyle}>Add Item</NavLink>
