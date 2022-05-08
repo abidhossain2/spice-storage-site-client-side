@@ -16,7 +16,7 @@ const AddInventoryItem = () => {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const supplier = e.target.supplier.value;
-        fetch(`http://localhost:5000/products`, {
+        fetch(`https://pure-river-37868.herokuapp.com/products`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const AddInventoryItem = () => {
                 e.target.reset();
             })
 
-        fetch(`http://localhost:5000/myitems`, {
+        fetch(`https://pure-river-37868.herokuapp.com/myitems`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -16,14 +16,14 @@ const Inventory = () => {
         backToHome('/')
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
 
     const handleQuantityDecrease = () => {
         const quantity = parseInt(product.quantity);
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const Inventory = () => {
         const quantity = parseInt(product.quantity);
         const newAmount = newQuantity + quantity;
         console.log(newAmount);
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

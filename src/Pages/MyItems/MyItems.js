@@ -10,7 +10,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth)
     useEffect(() => {
         const email = user?.email;
-        fetch(`http://localhost:5000/myitems?email=${email}`)
+        fetch(`https://pure-river-37868.herokuapp.com/myitems?email=${email}`)
         .then(res => res.json())
         .then(data => {
             setMyitems(data)
