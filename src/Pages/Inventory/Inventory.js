@@ -43,21 +43,23 @@ const Inventory = () => {
         const newQuantity = parseInt(amount);
         const quantity = parseInt(product.quantity);
         const newAmount = newQuantity + quantity;
-        console.log(newAmount);
-        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({ newAmount })
-
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
+        if(quantity){
+            console.log(newAmount);
+            fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ newAmount })
+    
             })
-        window.location.reload();
-        toast('Successfully Updated')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    window.location.reload();
+                })
+                toast('Successfully Updated')
+        }
     }
 
 
