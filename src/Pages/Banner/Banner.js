@@ -19,8 +19,8 @@ const Banner = () => {
         <div>
             {
                 spinner ?
-                    <div className='loader'>
-                        <Spinner animation="border" variant="warning" />
+                    <div>
+                        <Spinner animation="border" variant="warning" className='loader' />
                     </div> :
                     <>
                         <Header></Header>
