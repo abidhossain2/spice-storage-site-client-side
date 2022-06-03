@@ -2,7 +2,7 @@
 
 Live website link  https://spice-stoke-service.web.app/
 
-## Project Detail
+## Project Details
 * This project is based on SPA(Single Page Application). For this I use react router. In this project I implement email, password and google authentication which is offerd by firebase. I use active link
 for understanding which route we are. 
 
