@@ -6,7 +6,7 @@ const MyItem = (props) => {
     const { name, detail, price, quantity, img, supplier, _id } = props.myItem;
 
     const myItemDelete = () => {
-        fetch(`https://pure-river-37868.herokuapp.com/myitems/${_id}`, {
+        fetch(`https://spice-server-l1gh.onrender.com/myitems/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

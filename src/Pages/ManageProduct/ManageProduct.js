@@ -9,7 +9,7 @@ const ManageProduct = (props) => {
     const [products, setProducts] = useProducts()
     const deleteItem =  (id) => {
 
-        fetch(`https://pure-river-37868.herokuapp.com/inventory/${_id}`, {
+        fetch(`https://spice-server-l1gh.onrender.com/inventory/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -16,7 +16,7 @@ const AddInventoryItem = () => {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const supplier = e.target.supplier.value;
-        fetch(`https://pure-river-37868.herokuapp.com/products`, {
+        fetch(`https://spice-server-l1gh.onrender.com/products`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const AddInventoryItem = () => {
                 e.target.reset();
             })
 
-        fetch(`https://pure-river-37868.herokuapp.com/myitems`, {
+        fetch(`https://spice-server-l1gh.onrender.com/myitems`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

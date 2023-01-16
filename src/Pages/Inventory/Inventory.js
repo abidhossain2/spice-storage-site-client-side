@@ -16,14 +16,14 @@ const Inventory = () => {
         backToHome('/')
     }
     useEffect(() => {
-        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`)
+        fetch(`https://spice-server-l1gh.onrender.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
 
     const handleQuantityDecrease = () => {
         const quantity = parseInt(product.quantity);
-        fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
+        fetch(`https://spice-server-l1gh.onrender.com/inventory/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const Inventory = () => {
         const newAmount = newQuantity + quantity;
         if(quantity){
             console.log(newAmount);
-            fetch(`https://pure-river-37868.herokuapp.com/inventory/${id}`, {
+            fetch(`https://spice-server-l1gh.onrender.com/inventory/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'
